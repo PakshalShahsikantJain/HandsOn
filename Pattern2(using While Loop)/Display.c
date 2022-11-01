@@ -1,0 +1,35 @@
+/*
+    Author : Pakshal Jain
+    Date : 17/09/2022
+    Program : To Print Entered number of "*" on Screen using While Loop
+*/
+
+//Required Imports
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Funtion To Print *
+void Display(int No) 
+{
+    while(No > 0) 
+    {
+        printf("*\t");
+        No--;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int No = 0;
+
+    printf("Jay Ganesh......\n");
+    printf("Enter One Number.....\n");
+    scanf("%d",&No);
+
+    Display(No);
+
+    return 0;
+}
