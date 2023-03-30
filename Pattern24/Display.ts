@@ -23,6 +23,8 @@ function Display(No : number,No2 : number)
     }
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+
 //Main Function
 function main() 
 {
@@ -35,4 +37,5 @@ function main()
     Display(No,No2);
 }
 
+//Call TO Main Function
 main();

@@ -16,6 +16,7 @@ function Display(No, No2) {
         console.log();
     }
 }
+/////////////////////////////////////////////////////////////////////////////////
 //Main Function
 function main() {
     var No = 5;
@@ -24,4 +25,5 @@ function main() {
     //Call To Display Function
     Display(No, No2);
 }
+//Call TO Main Function
 main();
