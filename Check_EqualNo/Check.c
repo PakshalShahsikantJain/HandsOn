@@ -19,6 +19,7 @@ typedef int BOOL;
 //Function To Check
 BOOL Check(int No,int No2)
 {
+    //Logic To Check Entered Number is Equal or Not 
     if(No == No2)
     {
         return TRUE;
