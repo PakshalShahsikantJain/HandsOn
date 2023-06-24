@@ -78,7 +78,7 @@ int main()
     iret = dobj.Calculate();
 
     //Printing obtained Output
-    cout<<"Odd Factorial of Entered Number is : "<<iret;
+    cout<<"Difference Between Even and Odd Factoriak of Entered Number is : "<<iret;
 
     return 0;
 }
