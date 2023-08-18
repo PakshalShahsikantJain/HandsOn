@@ -5,9 +5,9 @@
 */
 
 //Requried Libraries
+#include<iostream>
 using namespace std;
 
-#include<iostream>
 //Class Declaration
 class Display
 {

@@ -5,9 +5,8 @@
 */
 
 //Required Librariess
-using namespace std;
-
 #include<iostream>
+using namespace std;
 
 //Class Declaration
 class Frequency

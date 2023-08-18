@@ -5,9 +5,8 @@
 */
 
 //Required imports
-using namespace std;
-
 #include<iostream>
+using namespace std;
 
 //Starting Point of Class Division
 class Division 
