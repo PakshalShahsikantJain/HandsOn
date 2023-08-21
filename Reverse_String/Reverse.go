@@ -1,11 +1,14 @@
 /*
     Author : Pakshal Shashikant Jain 
-    Date : 11/08/2023
-    Program : Write a program which accept string from user and display it inn
-              reverse order.
+    Date : 21/08/2023
+    Program : Write a program which accept string from user reverse that string
+              in place.
 
-              Input : "MarvellouS"
-              Output : "SuollevraM"
+              Input : “abcd”
+              Output : “dcba”
+
+              Input : “abba”
+              Output : “abba” 
 */
 
 //Required Libraries
