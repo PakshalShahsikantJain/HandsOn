@@ -1,8 +1,8 @@
 /*
     Author : Pakshal Shashikant Jain 
     Date : 01/09/2023
-    Program : Write a program which accept one number from user and off 7th and 10th
-              bit of that number. Return modified number.  
+    Program : Write a program which accept one number from user and toggle 7th bit of
+              that number. Return modified number.  
 */
 
 //Required Libraries
@@ -12,22 +12,16 @@ typedef int unsigned UINT;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//Function To Off On Bit
-UINT offBit(UINT iNo)
-{                              //    0    0    0    0    0    2    4    0
-    int iMask = 0X00000240;    //   0000 0000 0000 0000 0000 0010 0100 0000
+//Function To Toggle Bit
+UINT ToggleBit(UINT iNo)
+{                              //    0    0    0    0    0    0    4    0
+    int iMask = 0X00000040;    //   0000 0000 0000 0000 0000 0000 0100 0000
     int iResult = 0;
     UINT iret = 0;
 
-    iResult = iNo & iMask;
+    iResult = iNo ^ iMask;    
 
-    //Logic To Off 7th and 10th Bit if On
-    if(iResult == iMask)
-    {
-        iret = iNo ^ iMask;    
-    }
-
-    return iret;
+    return iResult;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -44,8 +38,8 @@ int main()
     printf("Enter One Number \n");
     scanf("%d",&iNo);
 
-    //Call To OffBit Function
-    iret = offBit(iNo);
+    //Call To ToggleBit Function
+    iret = ToggleBit(iNo);
 
     //Printing Modified Number
     printf("Modified Number is : %u",iret);

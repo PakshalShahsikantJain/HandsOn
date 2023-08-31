@@ -1,23 +1,19 @@
 """
     Author : Pakshal Shashikant Jain 
     Date : 01/09/2023
-    Program : Write a program which accept one number from user and off 7th and 10th
-              bit of that number. Return modified number.  
+    Program : Write a program which accept one number from user and toggle 7th bit of
+              that number. Return modified number. 
 """
 
 #################################################################################################################################################
 
 #Class Declaration
-def OffBit(iNo) :
-    iResult = 0;           #  0    0    0    0    0    2    4    0 
-    iMask = 0X00000240;    # 0000 0000 0000 0000 0000 0010 0100 0000
+def ToggleBit(iNo) :
+    iResult = 0;           #  0    0    0    0    0    0    4    0 
+    iMask = 0X00000040;    # 0000 0000 0000 0000 0000 0000 0100 0000
 
-    #Logic To Off Given Bit
-    iResult = iMask & iNo;
-
-    if(iResult == iMask) :
-        iResult = iMask ^ iNo;
-    
+    #Logic To Toggle Given Bit
+    iResult = iMask ^ iNo;
 
     return iResult;
 
@@ -34,8 +30,8 @@ def main() :
     print("Enter One Number");
     iNo = int(input());
 
-    #Call To OffBit Function
-    iret = OffBit(iNo);
+    #Call To ToggleBit Function
+    iret = ToggleBit(iNo);
 
     #Printing Modified Number
     print("Modified Number is : %d"%iret);

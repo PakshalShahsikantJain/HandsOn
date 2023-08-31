@@ -1,8 +1,8 @@
 /*
     Author : Pakshal Shashikant Jain 
     Date : 01/09/2023
-    Program : Write a program which accept one number from user and off 7th and 10th
-              bit of that number. Return modified number.  
+    Program : Write a program which accept one number from user and toggle 7th bit of
+              that number. Return modified number.  
 */
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -14,13 +14,13 @@ import java.util.*;
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Class Declaration
-class OffBit
+class Bit
 {
     //Characteristics of Class
     int No;
 
     //Constructor of Class
-    OffBit()
+    Bit()
     {
         this.No = 0;
     }
@@ -37,23 +37,18 @@ class OffBit
     }
 
     //Behaviour of Class 
-    int offbit()
+    int Togglebit()
     {
-        int iResult = 0;           //  0    0    0    0    0    2    4    0
-        int iMask = 0X00000240;   //  0000 0000 0000 0000 0000 0010 0100 0000
+        int iResult = 0;           //  0    0    0    0    0    0    4    0
+        int iMask = 0X00000040;   //  0000 0000 0000 0000 0000 0000 0100 0000
 
         if(this.No < 0)
         {
             this.No = -this.No;
         }
 
-        //Logic To off 7th and 10th Bit
-        iResult = iMask & this.No;
-
-        if(iResult == iMask)
-        {
-            iResult = this.No ^ iMask;
-        }
+        //Logic To Toggle 7 Bit
+        iResult = iMask ^ this.No;
 
         return iResult;
     }
@@ -71,12 +66,12 @@ class Modify
 
         System.out.println("Jay Ganesh....");
 
-        //Creating object of OffBit Class
-        OffBit obj = new OffBit();
+        //Creating object of  Class
+        Bit bobj = new Bit();
 
         //Call To Behaviour of Class
-        obj.Accept();
-        iret = obj.offbit();
+        bobj.Accept();
+        iret = bobj.Togglebit();
 
         //Printing Modified Number 
         System.out.printf("Modified Number is : %d",iret);

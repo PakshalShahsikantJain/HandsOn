@@ -1,8 +1,8 @@
 /*
     Author : Pakshal Shashikant Jain 
     Date : 01/09/2023
-    Program : Write a program which accept one number from user and off 7th and 10th
-              bit of that number. Return modified number. 
+    Program : Write a program which accept one number from user and toggle 7th bit of
+              that number. Return modified number. 
 */
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -14,7 +14,7 @@ using namespace std;
 typedef int UINT;
 
 //Class Declaration
-class OffBit
+class Bit
 {
     //Characteristics of Class
     private :
@@ -22,7 +22,7 @@ class OffBit
 
     //Constructor of Class
     public : 
-        OffBit()
+        Bit()
         {
             this->No = 0;
         }
@@ -36,18 +36,13 @@ class OffBit
     }
 
     //Behaviour of Class To 
-    UINT offbit()
+    UINT ToggleBit()
     {
-        int iResult = 0;              //  0    0    0    0    0    2    4    0
-        int iMask = 0X00000240;      //  0000 0000 0000 0000 0000 0010 0100 0000
+        int iResult = 0;              //  0    0    0    0    0    0    4    0
+        int iMask = 0X00000040;      //  0000 0000 0000 0000 0000 0000 0100 0000
 
-        //Logic To Off Bit 
-        iResult = iMask & this->No;
-
-        if(iResult == iMask)
-        {
-            iResult = iMask ^ this->No;
-        }
+        //Logic To Toggle Bit 
+        iResult = iMask ^ this->No;
 
         return iResult;
     }
@@ -62,12 +57,12 @@ int main()
 
     cout<<"Jay Ganesh.....\n";
 
-    //Creating object of OffBit Class 
-    OffBit *cobj = new OffBit();
+    //Creating object of Bit Class 
+    Bit *bobj = new Bit();
 
     //Call To Behaviours of Class
-    cobj->Accept();
-    iRet = cobj->offbit();
+    bobj->Accept();
+    iRet = bobj->ToggleBit();
 
     //Printing Modified Number
     cout<<"Modified Number is : "<<iRet;
