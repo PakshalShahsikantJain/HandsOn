@@ -21,11 +21,11 @@ using namespace std;
 //Class Declaration
 class Pattern 
 {
-    //Constructor of Class
+    //Characteristics of Class
     private :   
         int No = 0;
         int No2 = 0;
-    //Characteristics of Class
+    //Constructor of Class
     public :
         Pattern(int no,int no2)
         {
