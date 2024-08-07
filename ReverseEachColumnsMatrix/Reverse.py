@@ -1,7 +1,7 @@
 """
     Author : Pakshal Shashikant Jain 
     Date : 7/08/2024
-    Program : Write a program which accept matrix and reverse the contents of each row. 
+    Program : Write a program which accept matrix and reverse the contents of each Column. 
 """
 
 #Required libraries
@@ -9,15 +9,15 @@ import numpy as np
 
 ############################################################################################################################################33333
 
-#Function to Reverse each row of the matrix 
-def ReverseRow(arr,irow,icol) :
+#Function to Reverse Each columns of the matrix 
+def ReverseColumn(arr,irow,icol) :
     i = 0;
     j = 0;
 
-    #logic to Reverse each row of the matrix
+    #logic to Reverse each columns of the matrix
     print("Updated matrix is as follows : ");
-    for i in range(irow) :
-        for j in range(icol - 1,-1,-1) :
+    for i in range(irow - 1,-1,-1) :
+        for j in range(icol) :
             print("%d"%arr[i][j],end="\t");
         print("");
 
@@ -59,8 +59,8 @@ def main() :
             print("%d \t"%arr[i][j],end = "");
         print("");
 
-    #Call to ReverseRow function
-    ReverseRow(arr,iRow,iCol);
+    #Call to ReverseColumn function
+    ReverseColumn(arr,iRow,iCol);
     
 ##################################################################################################################################################33
 
